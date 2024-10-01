@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0; /* Remove padding from body to prevent scroll issues */
+  background-color: #f0f0f0; /* Light mode background color */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  color: black; /* Light mode text color */
+transform: scale(0.8);
+    transform-origin: top left; /* Set the origin to top left */
+    width: 125%; /* Adjust width to compensate for the scale */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+  text-align: center; /* Center the title */
+  margin-bottom: 10px; /* Space below the header */
+}
+
+h1 {
+  font-size: 24px; /* Smaller title font size */
+  margin: 0; /* Remove default margin */
+}
+
+main {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Align items in a row */
+  width: 100%; /* Full width */
+}
+
+#large-image-container {
+  position: fixed; /* Fixed positioning to follow scroll */
+  top: 20px; /* Space from the top */
+  left: 20px; /* Space from the left */
+  width: 300px; /* Fixed width for the large image area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+#large-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#deck-display {
+  flex: 1; /* Allow deck display to take remaining space */
+  margin-left: 340px; /* Space for the fixed image */
+  margin-right: 20px; /* Margin on the right */
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 1200px;
+  border-radius: 5px;
+  overflow-y: auto; /* Allow scrolling if content exceeds max height */
+}
+
+
+
+/* Dark mode styles for the deck area */
+body.dark-mode #deck-display {
+  background-color: #333; /* Dark mode background color */
+  color: white; /* Dark mode text color */
+  border: 1px solid #444; /* Dark mode border color */
+}
+
+#deck-list {
+  display: flex; /* Flexbox for card display in deck */
+  flex-wrap: wrap; /* Allow cards to wrap */
+  justify-content: center; /* Center the deck cards */
+}
+
+#card-list {
+  width: 300px; /* Fixed width for the card list */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items */
+  max-height: 800px; /* Set a max height for the card list */
+  overflow-y: auto; /* Enable vertical scrolling only */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  padding: 10px;
+  background-color: white; /* Light mode background */
+  border: 1px solid #ccc; /* Light mode border */
+  border-radius: 5px;
+}
+
+/* Dark mode styles */
+body.dark-mode #card-list {
+  background-color: #333; /* Dark mode background */
+  color: white; /* Dark mode text color */
+  border: 1px solid #444; /* Dark mode border */
+}
+
+#cards-container {
+  display: flex; /* Flexbox for card display */
+  flex-wrap: wrap; /* Allow cards to wrap in the container */
+  justify-content: center; /* Center the cards */
+  gap: 10px; /* Space between cards */
+  width: 100%; /* Ensure no horizontal scroll */
+}
+
+.card {
+  background-color: white; /* Default card background for light mode */
+  border: 1px solid #ccc; /* Light mode border */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+body.dark-mode .card {
+  background-color: #333; /* Dark mode card background */
+  color: white; /* Dark mode text color */
+  border: 1px solid #444; /* Dark mode card border */
+}
+
+.card img {
+  width: 100%;
+  transition: transform 0.2s ease;
+}
+
+.card:hover img {
+  transform: scale(1.2);
+}
+
+
+
+footer {
+  text-align: center; /* Center footer text */
+  margin-top: 10px; /* Space above footer */
+}
+
+#search-input {
+  width: 100%; /* Full width of the card list section */
+  padding: 8px; /* Padding for better UX */
+  margin-bottom: 10px; /* Add space below the input field */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Rounded corners for a clean look */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .card {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-mode #large-image-container {
+  border-color: white;
+}
+
+/* "Your Deck" text styles */
+#deck-display h2 {
+  color: black; /* Light mode color */
+}
+
+body.dark-mode #deck-display h2 {
+  color: white; /* Dark mode color */
+}
+
+/* Dark mode button styling */
+#dark-mode-toggle {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+

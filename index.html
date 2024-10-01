@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokémon TCG Pocket Deck Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Pokémon TCG Pocket Deck Builder</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    <main>
+<div id="large-image-container">
+    <img id="large-image" src="" alt="Zoomed Image" style="display:none;">
+    <div id="image-magnifier"></div> <!-- This will be the magnifying window -->
+</div>
+
+        <div id="deck-display">
+            <h2>Your Deck</h2> 
+<div id="deck-actions">
+    <button id="save-deck-button">Save Deck</button>
+    <button id="load-deck-button">Load Deck</button>
+    <button id="clear-deck-button">Delete Save</button>
+<!-- <button id="toggle-display-button">Show Copies</button> -->
+<button id="shuffle-deck-button">Shuffle Deck</button>
+<button id="export-deck-button">Export Deck</button> <!-- Add this line -->
+    <input type="file" id="import-deck-input" accept=".json" style="display: none;"> <!-- Hidden file input for importing -->
+    <button id="import-deck-button">Import Deck</button>
+</div>
+
+            <div id="deck-list"></div>
+        </div>
+        <div id="card-list">
+            <h2>Available Cards</h2>
+
+            <!-- Search input field -->
+            <input type="text" id="search-input" placeholder="Search for cards..." />
+
+            <!-- Type filter dropdown -->
+            <select id="type-filter">
+                <option value=""> </option> <!-- Empty option -->
+                <option value="Grass">Grass</option>
+                <option value="Fire">Fire</option>
+                <option value="Water">Water</option>
+                <option value="Electric">Electric</option>
+		<option value="Psychic">Psychic</option>
+		<option value="Fighting">Fighting</option>
+		<option value="Dark">Dark</option>
+		<option value="Metal">Metal</option>
+		<option value="Dragon">Dragon</option>
+		<option value="Colorless">Colorless</option>
+		<option value="Item">Item</option>
+		<option value="Supporter">Supporter</option>
+            </select>
+
+            <div id="cards-container"></div> <!-- Single instance of cards-container -->
+        </div>
+    </main>
+    <footer>
+        <p>Created by Terdack</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
