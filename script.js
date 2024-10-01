@@ -1,3 +1,19 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const HomePage = () => {
+    return (
+        <div>
+            <h1>Welcome to My Pokémon TCG Deck Builder!</h1>
+            {/* Add Speed Insights component */}
+            <SpeedInsights />
+            {/* Other components and content */}
+        </div>
+    );
+};
+
+export default HomePage;
+
+
 const cards = [
 {
     id: '0A1',
