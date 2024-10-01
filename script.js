@@ -44,7 +44,7 @@ const cards = [
 {
     id: '0A7',
     name: 'Professors Research',
-    types: ['Item'],
+    types: ['Supporter'],
     image: 'images/professors-research-oak.webp',
     zoomedImage: 'images/professors-research-oak.webp',
   }, 
