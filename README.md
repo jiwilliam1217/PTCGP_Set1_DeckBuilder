@@ -2,7 +2,7 @@
 
 A simple web-based deck builder tool for **Pokémon TCG Pocket**, designed to help players create and organize decks for the launch set *Genetic Apex*.
 
-This app runs entirely in the browser—no login, no server-side code, just fast and intuitive deck editing.
+This app runs entirely in the browser - no login, no server-side code, just fast and intuitive deck editing.
 
 Decks are saved locally to your browser session. Otherwise you can export and save deck files to your machine and import them back into the application.
 
