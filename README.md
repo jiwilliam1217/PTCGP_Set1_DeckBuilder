@@ -1,4 +1,4 @@
-# Pokémon TCG Pocket Deck Builder 🃏
+# 🃏 Pokémon TCG Pocket Deck Builder
 
 A simple web-based deck builder tool for **Pokémon TCG Pocket**, designed to help players create and organize decks for the launch set *Genetic Apex*.
 
